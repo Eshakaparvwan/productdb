@@ -1,0 +1,52 @@
+FILE STRUCTURE 
+
+1.Server connectivity: the mongoose connectivity and localhost path is defined in the index.js file. Its the startpoint
+2.Schema defination
+ -the schema defination is in ./models folder
+
+3.Routes and functioning 
+
+- ./app has one folder named controller and one file name route.js 
+    -./app/controllers - controllers contains the working function of the api Routes
+    -./app/route.js - it contains the routes and the related call.
+
+INSTALLTION:
+
+    -Requirements and dependencies: node.js , express.js ,mongoose ,mongodb
+
+    step1:  node js and mongodb should be preinstalled 
+            clone the repository into a desired folder.
+            {git clone (hashcode/path)}
+
+    step 2:  navigate into the repository (via gitbash or powershell or node shell or linuxshell)
+             install express.js , mongoose 
+Now setup is ready .
+
+HOW TO RUN
+    Requirements: postman 
+
+    step1: run mongod command in powershell or any shell
+    step2: naivgate to the folder and run node index.js or nodemon index.js in another shell
+    step3 : go to postman and run the desired route( also add the content in the body)
+    CREATE:    http://localhost:4000/prod  (type: POST)
+          **  Add content in response body example is given in the end of doc** 
+                
+    FIND:        http://localhost:4000/prod/:prodID  (type: GET)
+          **  replace prodID with the product id ** 
+                
+    UPDATE:    http://localhost:4000/prod/:prodID  (type: PUT)
+          **  replace prodID with the product id and  Add content in response body example is given in the end of doc** 
+                
+    DELETE:      http://localhost:4000/prod/:prodID  (type: DELETE)
+         **  replace prodID with the product id ** 
+
+
+EXAMPLE OF RES.BODY CONTENT 
+{   
+    "categoryName" : "fruit",	  
+    "productName" :"orange",		
+    "qtyPerUnit" : 1,		
+    "unitPrice" : 120,		
+    "unitInStock" : 25,		
+    "discontinued" : false
+}
